@@ -11,7 +11,8 @@ def binary_search(sorted_array, target):
     left, right = 0, len(sorted_array) - 1
     
     while left <= right:
-        mid = (left + right) // 2
+        # mid = (left + right) // 2
+        mid = left + (right-left)//2   #To handle integer max flow
         if target < sorted_array[mid]:
             right = mid - 1
         elif target > sorted_array[mid]:
